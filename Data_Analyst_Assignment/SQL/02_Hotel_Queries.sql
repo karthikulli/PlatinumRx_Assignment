@@ -40,16 +40,6 @@ SELECT
 FROM booking_commercials bc
 WHERE strftime('%Y', bc.bill_date) = '2021'
 GROUP BY month, bc.item_id
-HAVING total_qty = (
-    SELECT MAX(qty)
-    FROM (
-        SELECT SUM(item_quantity) AS qty
-        FROM booking_commercials
-        WHERE strftime('%Y', bill_date) = '2021'
-          AND strftime('%m', bill_date) = month
-        GROUP BY item_id
-    )
-)
 
 UNION ALL
 

@@ -1,0 +1,18 @@
+
+
+
+=XLOOKUP(A2, ticket!E:E, ticket!B:B, "")
+
+
+
+=SUMPRODUCT(
+(ticket!D:D=H2)*
+(INT(ticket!B:B)=INT(ticket!C:C))
+)
+
+
+
+=SUMPRODUCT(
+(ticket!D:D=H2)*
+(INT(ticket!B:B)=INT(ticket!C:C))
+)
